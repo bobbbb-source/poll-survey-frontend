@@ -11,7 +11,7 @@ export async function startConnection(onReceiveResults) {
     }
 
     connection = new signalR.HubConnectionBuilder()
-        .withUrl("http://localhost:8080/pollhub")
+        .withUrl("https://poll-survey-backend-production.up.railway.app/pollhub")
         .withAutomaticReconnect()
         .build();
 

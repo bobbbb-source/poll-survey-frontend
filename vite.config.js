@@ -11,5 +11,11 @@ export default defineConfig({
                 new URL("./src", import.meta.url)
             )
         }
+    },
+
+    server: {
+        watch: {
+            ignored: ["**/.vs/**"]
+        }
     }
 });
