@@ -1,16 +1,85 @@
-# React + Vite
+# Poll & Survey Builder – Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+React frontend for the AMD201 Poll & Survey Builder project.
 
-Currently, two official plugins are available:
+The application allows users to create multiple-choice polls, share a unique poll link, vote without creating an account, view live results, and close polls.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Live Application
 
-## React Compiler
+Frontend:
+https://poll-survey-frontend.vercel.app
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Backend API:
+https://poll-survey-backend-production.up.railway.app
 
-## Expanding the Oxlint configuration
+## Backend Repository
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+https://github.com/bobbbb-source/poll-survey-backend
+
+## Technologies
+
+- React
+- Vite
+- React Router
+- Axios
+- SignalR
+- Chart.js
+- Bootstrap
+
+## Main Pages
+
+- Home – application landing page
+- Create Poll – create a poll with 2–6 options
+- Vote Poll – open a poll using its unique code and submit a vote
+- Results – display poll results and receive real-time updates
+
+## Architecture
+
+User  
+↓  
+React + Vite Frontend  
+↓  
+REST API + SignalR  
+↓  
+ASP.NET Core Backend  
+↓  
+Entity Framework Core  
+↓  
+PostgreSQL
+
+The frontend communicates with the ASP.NET Core backend using REST API requests through Axios.
+
+SignalR is used on the results page so updated vote counts can be received without refreshing the page.
+
+## Local Setup
+
+1. Clone the repository.
+
+2. Install dependencies:
+
+```bash
+npm install
+
+Start the development server:
+npm run dev
+Open the local URL shown by Vite in your browser.
+Production Build
+
+To create a production build:
+
+npm run build
+Deployment
+
+The frontend is deployed on Vercel.
+
+Direct React Router URLs are handled using the rewrite configuration in vercel.json.
+
+Source Repositories
+
+Frontend:
+https://github.com/bobbbb-source/poll-survey-frontend
+
+Backend:
+https://github.com/bobbbb-source/poll-survey-backend
+
+
