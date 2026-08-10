@@ -59,15 +59,22 @@ SignalR is used on the results page so updated vote counts can be received witho
 
 ```bash
 npm install
+```
 
 Start the development server:
+```bash
 npm run dev
+```
+
 Open the local URL shown by Vite in your browser.
 Production Build
 
 To create a production build:
 
+```bash
 npm run build
+```
+
 Deployment
 
 The frontend is deployed on Vercel.
