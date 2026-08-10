@@ -67,7 +67,8 @@ npm run dev
 ```
 
 Open the local URL shown by Vite in your browser.
-Production Build
+
+## Production Build
 
 To create a production build:
 
@@ -75,13 +76,13 @@ To create a production build:
 npm run build
 ```
 
-Deployment
+## Deployment
 
 The frontend is deployed on Vercel.
 
 Direct React Router URLs are handled using the rewrite configuration in vercel.json.
 
-Source Repositories
+## Source Repositories
 
 Frontend:
 https://github.com/bobbbb-source/poll-survey-frontend
